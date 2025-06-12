@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #083049;
+    color: #d3d3d3;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background-color: rgba(8, 48, 73, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: #c60844;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+
+.logo span {
+    color: #d3d3d3;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-login {
+    background: transparent;
+    border: 2px solid #d3d3d3;
+    color: #d3d3d3;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #d3d3d3;
+    color: #083049;
+}
+
+.btn-signup {
+    background: #c60844;
+    border: 2px solid #c60844;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+    background: #a0062e;
+    border-color: #a0062e;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(8, 48, 73, 0.7), rgba(8, 48, 73, 0.7)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675"><rect fill="%23083049" width="1200" height="675"/><circle fill="%23c60844" opacity="0.1" cx="300" cy="200" r="150"/><circle fill="%23c60844" opacity="0.1" cx="900" cy="400" r="200"/><polygon fill="%23d3d3d3" opacity="0.05" points="0,675 400,500 800,600 1200,400 1200,675"/></svg>') center/cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(8, 48, 73, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #d3d3d3;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-cta h2 {
+    font-size: 2.2rem;
+    color: #c60844;
+    margin-bottom: 1rem;
+}
+
+.hero-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #d3d3d3;
+}
+
+.btn-cta {
+    background: #c60844;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-cta:hover {
+    background: #a0062e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(198, 8, 68, 0.4);
+}
+
+.review-content {
+    margin-top: 3rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 1.5rem;
+}
+
+.rating-text {
+    color: #d3d3d3;
+    font-size: 1rem;
+}
+
+/* Main Content */
+.main-content {
+    padding: 4rem 0;
+}
+
+.content-article {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.content-section h2 {
+    color: #c60844;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #c60844;
+    padding-bottom: 0.5rem;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+    color: #d3d3d3;
+    line-height: 1.7;
+}
+
+/* Bonus Grid */
+.bonus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.bonus-card {
+    background: rgba(211, 211, 211, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(198, 8, 68, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.bonus-card:hover {
+    transform: translateY(-5px);
+    border-color: #c60844;
+}
+
+.bonus-card h3 {
+    color: #c60844;
+    margin-bottom: 1rem;
+}
+
+.bonus-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d3d3d3;
+    margin-bottom: 1rem;
+}
+
+/* Payment Methods */
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.payment-category {
+    background: rgba(211, 211, 211, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #c60844;
+}
+
+.payment-category h4 {
+    color: #c60844;
+    margin-bottom: 1rem;
+}
+
+.payment-category ul {
+    list-style: none;
+}
+
+.payment-category li {
+    padding: 0.3rem 0;
+    color: #d3d3d3;
+}
+
+.payment-category li:before {
+    content: "✓ ";
+    color: #c60844;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background: rgba(8, 48, 73, 0.95);
+    border-top: 2px solid #c60844;
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: #c60844;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-section h4 {
+    color: #c60844;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section p {
+    color: #d3d3d3;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(211, 211, 211, 0.2);
+    color: #d3d3d3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-cta h2 {
+        font-size: 1.8rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero {
+        height: 80vh;
+        margin-top: 120px;
+    }
+    
+    .bonus-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
